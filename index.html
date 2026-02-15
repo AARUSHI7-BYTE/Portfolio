@@ -1,0 +1,240 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aarushi Garg | Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">  <style>
+      body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #0A0A0A, #1F1F1F);
+    color: #FFD700;
+    scroll-behavior: smooth;
+  }
+
+  .glass {
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(18px);
+    border: 1px solid rgba(255,255,255,0.08);
+    transition: all 0.4s ease;
+  }
+
+  .glass:hover {
+    border: 1px solid #FFD700;
+    transform: translateY(-6px);
+    box-shadow: 0 8px 30px rgba(255,215,0,0.4);
+  }
+
+  /* Neon Accent Text */
+  .accent {
+    background: linear-gradient(90deg,#FFD700,#00FFFF);
+    background-size: 300%;
+    animation: gradientFlow 6s ease infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  @keyframes gradientFlow {
+    0% {background-position: 0%;}
+    50% {background-position: 100%;}
+    100% {background-position: 0%;}
+  }
+
+
+  .btn-primary {
+    background: linear-gradient(90deg,#FFD700,#00FFFF);
+    color: #0A0A0A;
+    background-size: 200%;
+    transition: all 0.4s;
+    border-radius: 12px;
+  }
+
+  .btn-primary:hover {
+    background-position: 100%;
+    transform: scale(1.07);
+    box-shadow: 0 0 25px rgba(0,255,255,0.5), 0 0 15px rgba(255,215,0,0.5);
+  }
+
+  .btn-secondary {
+    border: 1px solid rgba(255,215,0,0.4);
+    transition: 0.3s;
+    border-radius: 12px;
+    color: #FFD700;
+  }
+
+  .btn-secondary:hover {
+    border: 1px solid #00FFFF;
+    box-shadow: 0 0 20px rgba(0,255,255,0.4);
+    transform: scale(1.05);
+  }
+
+  /* Fade-in animations */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.9s ease;
+  }
+
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Profile image floating glow */
+  .profile-img {
+    border-radius: 20px;
+    border: 2px solid rgba(255,215,0,0.3);
+    box-shadow: 0 0 30px rgba(255,215,0,0.6), 0 0 50px rgba(0,255,255,0.3);
+    animation: float 4s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%,100% { transform: translateY(0) }
+    50% { transform: translateY(-10px) }
+  }
+
+  /* Section glow lines */
+  section {
+    position: relative;
+  }
+
+  section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 40%;
+    width: 20%;
+    height: 2px;
+    background: linear-gradient(90deg,#FFD700,#00FFFF);
+    filter: blur(2px);
+    opacity: 0.4;
+  }
+  nav a:hover {
+    color: #00FFFF;
+    transition: 0.3s;
+  }
+
+  </style></head>
+<body><!-- NAVBAR --><nav class="fixed w-full top-0 z-50 glass">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center"><div class="text-xl font-bold accent">Aarushi Garg</div>
+
+<div class="hidden md:flex space-x-8 font-medium">
+  <a href="#home" class="hover:text-indigo-400">Home</a>
+  <a href="#about" class="hover:text-indigo-400">About</a>
+  <a href="#skills" class="hover:text-indigo-400">Skills</a>
+  <a href="#projects" class="hover:text-indigo-400">Projects</a>
+  <a href="#contact" class="hover:text-indigo-400">Contact</a>
+  <a href="#resume" class="hover:text-cyan-400">Resume</a>
+</div>
+
+<button id="menu-btn" class="md:hidden text-2xl">☰</button>
+
+  </div>  <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 space-y-4">
+    <a href="#home" class="block">Home</a>
+    <a href="#about" class="block">About</a>
+    <a href="#skills" class="block">Skills</a>
+    <a href="#projects" class="block">Projects</a>
+    <a href="#contact" class="block">Contact</a>
+  </div>
+</nav><!-- HERO --><section id="home" class="min-h-screen flex items-center justify-center text-center px-6">
+  <div class="fade-in"><h1 class="text-5xl md:text-7xl font-bold mb-6">
+  Hi, I'm <span class="accent">Aarushi Garg</span>
+</h1>
+
+<p class="text-gray-400 text-lg md:text-2xl mb-8 ">
+  Full Stack Developer
+</p>
+
+<a href="#projects" class="btn-primary px-8 py-3 rounded-lg font-semibold">
+  View My Work
+</a>
+
+  </div>
+</section><!-- ABOUT --><section id="about" class="max-w-7xl mx-auto px-6 py-20">  <div class="grid md:grid-cols-2 gap-12 items-center"><!-- IMAGE -->
+<div class="fade-in">
+  <img src="image.jpg" class="profile-img w-170 md:w-60 mx-auto">>
+</div>
+
+<!-- TEXT -->
+<div class="fade-in">
+
+  <h2 class="text-4xl font-bold mb-6 accent">About Me</h2>
+
+  <p class="text-gray-400 leading-relaxed mb-4">
+    I am Aarushi Garg, an Electronics and Communication Engineering student at Bharati Vidyapeeth College of Engineering, passionate about building modern, scalable and beautiful web applications.
+  </p>
+
+  <p class="text-gray-400 leading-relaxed mb-4">
+    I specialize in full stack development using React, Node.js, Supabase and modern UI frameworks. I love creating responsive, aesthetic and user‑friendly experiences.
+  </p>
+
+  <p class="text-gray-400 leading-relaxed">
+    My goal is to become a professional full stack developer and contribute to impactful real‑world tech products.
+  </p>
+
+</div>
+
+  </div></section><!-- SKILLS --><section id="skills" class="max-w-7xl mx-auto px-6 py-20"><h2 class="text-4xl font-bold mb-12 text-center accent fade-in">Skills</h2><div class="grid md:grid-cols-3 gap-8"><div class="glass p-6 rounded-xl fade-in">
+<h3 class="font-semibold text-xl mb-3">Languages</h3>
+<p class="text-gray-400">HTML, CSS, JavaScript, SQL</p>
+</div><div class="glass p-6 rounded-xl fade-in">
+<h3 class="font-semibold text-xl mb-3">Frameworks</h3>
+<p class="text-gray-400">React.js, Tailwind CSS, Node.js, Express.js</p>
+</div><div class="glass p-6 rounded-xl fade-in">
+<h3 class="font-semibold text-xl mb-3">Backend & Auth</h3>
+<p class="text-gray-400">REST APIs, JWT, OAuth</p>
+</div><div class="glass p-6 rounded-xl fade-in">
+<h3 class="font-semibold text-xl mb-3">Databases</h3>
+<p class="text-gray-400">Supabase, Firebase</p>
+</div><div class="glass p-6 rounded-xl fade-in">
+<h3 class="font-semibold text-xl mb-3">Tools</h3>
+<p class="text-gray-400">Git, GitHub, Postman, VS Code</p>
+</div><div class="glass p-6 rounded-xl fade-in">
+<h3 class="font-semibold text-xl mb-3">AI Tools</h3>
+<p class="text-gray-400">ChatGPT, GitHub Copilot</p>
+</div></div>
+</section><!-- PROJECT --><section id="projects" class="max-w-7xl mx-auto px-6 py-20"><h2 class="text-4xl font-bold mb-12 text-center accent fade-in">Project</h2><div class="glass rounded-xl overflow-hidden grid md:grid-cols-2 gap-6 items-center fade-in"><div>
+<img src="Project.jpeg" class="w-full h-full object-cover">
+</div><div class="p-8"><h3 class="text-2xl font-bold mb-4">Task Management System</h3><p class="text-gray-400 mb-6">
+A modern productivity web application that allows users to create, manage, edit and track daily tasks efficiently. Built using React, Node.js and Supabase with secure authentication and real‑time database.
+</p><div class="flex gap-4"><a href="https://drive.google.com/file/d/1IKlJYis29viao6zkItkz7CbAWQUyt2Ym/view?usp=sharing" target="_blank" class="btn-primary px-6 py-3 rounded-lg font-semibold">
+Live Demo
+</a><a href="https://github.com/AARUSHI7-BYTE/Time-tracking-app" target="_blank" class="btn-secondary px-6 py-3 rounded-lg font-semibold">
+GitHub
+</a></div></div></div></section><!-- CONTACT + RESUME -->
+<section id="resume" class="max-w-7xl mx-auto px-6 py-20 text-center">
+  <h2 class="text-4xl font-bold mb-6 accent fade-in">Download My Resume</h2>
+  <p class="text-gray-400 mb-8 fade-in">
+    Click the button below to download my resume in PDF format.
+  </p>
+  <a href="Aarushi_Garg_Resume.pdf" download class="btn-primary px-8 py-3 rounded-lg font-semibold fade-in">
+    Download Resume
+  </a>
+</section>
+<section id="contact" class="max-w-7xl mx-auto px-6 py-20"><h2 class="text-4xl font-bold text-center mb-12 accent fade-in">Contact Me</h2><div class="glass max-w-xl mx-auto p-8 rounded-xl fade-in text-center"><p class="mb-4 text-gray-400">Interested in working together or hiring me?</p><p class="mb-2">📧 aarushigarg6629@gmail.com</p>
+<p class="mb-6">🔗 linkedin.com/in/aarushi-garg-98ba02246</p><a href="mailto:aarushigarg6629@gmail.com" class="btn-primary px-6 py-3 rounded-lg font-semibold">
+Send Email
+</a></div></section>
+<footer class="text-center py-6 text-gray-500">
+©️ 2026 Aarushi Garg • Portfolio
+</footer><script>
+
+const menuBtn = document.getElementById('menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+
+menuBtn.onclick = () => mobileMenu.classList.toggle('hidden');
+
+
+const observer = new IntersectionObserver(entries => {
+entries.forEach(entry => {
+if(entry.isIntersecting){
+entry.target.classList.add('visible');
+}
+});
+});
+
+
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+</script></body>
+</html>
